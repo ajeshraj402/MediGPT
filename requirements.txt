@@ -1,6 +1,8 @@
 streamlit
-PyMuPDF
-sentence-transformers
-faiss-cpu
 transformers
-torch
+sentence-transformers==2.2.2
+torch==2.0.1
+faiss-cpu
+PyMuPDF
+sentencepiece
+protobuf
