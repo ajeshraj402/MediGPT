@@ -1,4 +1,5 @@
 from sentence_transformers import SentenceTransformer
+import torch
 
 def chunk_text(pages, chunk_size=150):
     chunks = []
@@ -15,7 +16,7 @@ def chunk_text(pages, chunk_size=150):
     return chunks
 
 def get_embedder(model_name="all-MiniLM-L6-v2"):
-    return SentenceTransformer(model_name)
+    return SentenceTransformer(model_name, device="cpu")
 
 def embed_chunks(chunks, model):
     texts = [chunk['chunk'] for chunk in chunks]
