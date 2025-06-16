@@ -4,5 +4,4 @@ sentence-transformers==2.2.2
 torch>=2.5.0
 faiss-cpu
 PyMuPDF
-sentencepiece
 protobuf
