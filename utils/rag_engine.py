@@ -2,7 +2,7 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
 
 def get_flan_pipeline():
     model_id = "google/flan-t5-base"
-    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    tokenizer = AutoTokenizer.from_pretrained(model_id, use_fast=False)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
     return pipeline("text2text-generation", model=model, tokenizer=tokenizer)
 
