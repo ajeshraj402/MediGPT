@@ -1,5 +1,11 @@
 # Medical PDF Chatbot with Page Source Tracking
 
+![Status](https://img.shields.io/badge/Status-Deployed-brightgreen)
+![Streamlit](https://img.shields.io/badge/Built%20With-Streamlit-orange)
+![Model](https://img.shields.io/badge/Model-Flan--T5--Base-blue)
+![Embeddings](https://img.shields.io/badge/Embeddings-MiniLM-lightgrey)
+![Vector Search](https://img.shields.io/badge/FAISS-Semantic%20Search-yellow)
+
 This project is a **RAG (Retrieval-Augmented Generation)** chatbot that allows users to:
 - Upload **medical-related PDF documents** (like Medicare guides, FDA sheets, insurance docs)
 - Ask **natural language questions**
