@@ -1,8 +1,8 @@
 streamlit==1.45.1
-torch==2.2.2
+torch==2.1.2
 transformers==4.40.2
 sentence-transformers==2.5.1
-faiss-cpu==1.7.4
+faiss-cpu==1.7.3
 PyMuPDF==1.23.25
 numpy==2.3.0
 protobuf>=4.22.0
