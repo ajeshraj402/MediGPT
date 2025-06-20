@@ -1,7 +1,9 @@
-streamlit
-transformers
-sentence-transformers==2.2.2
-torch>=2.5.0
-faiss-cpu
-PyMuPDF
-protobuf
+streamlit==1.45.1
+torch==2.2.2
+transformers==4.40.2
+sentence-transformers==2.5.1
+faiss-cpu==1.7.4
+PyMuPDF==1.23.25
+protobuf>=4.22.0
+#
+huggingface_hub==0.22.2
