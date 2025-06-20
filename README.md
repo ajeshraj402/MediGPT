@@ -17,7 +17,7 @@ This project is a **RAG (Retrieval-Augmented Generation)** chatbot that allows u
 ---
 
 ## Demo
-Try it live (free):  
+Try it live (free):  https://medigpt.streamlit.app/
 
 
 ---
