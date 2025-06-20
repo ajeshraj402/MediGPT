@@ -1,7 +1,5 @@
-import os
-import streamlit as st
+import os, streamlit as st
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
-
 
 HF_TOKEN = (
     st.secrets["huggingface"]["token"]
@@ -9,9 +7,9 @@ HF_TOKEN = (
     else os.getenv("HF_TOKEN")
 )
 
-
+@st.cache_resource
 def get_flan_pipeline():
-    model_id = "google/flan-t5-base"
+    model_id = "google/flan-t5-small"
 
     tokenizer = AutoTokenizer.from_pretrained(
         model_id,
@@ -21,14 +19,12 @@ def get_flan_pipeline():
 
     model = AutoModelForSeq2SeqLM.from_pretrained(
         model_id,
-        token=HF_TOKEN
+        token=HF_TOKEN,
+        torch_dtype="auto",
+        low_cpu_mem_usage=True,
     )
 
-    return pipeline(
-        "text2text-generation",
-        model=model,
-        tokenizer=tokenizer,
-    )
+    return pipeline("text2text-generation", model=model, tokenizer=tokenizer)
 
 
 def build_prompt(question, top_chunks):
