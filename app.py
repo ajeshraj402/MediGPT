@@ -9,8 +9,8 @@ from utils.embedder import chunk_text, get_embedder, embed_chunks
 from utils.retriever import load_faiss_and_chunks, retrieve_top_k_chunks
 from utils.rag_engine import get_flan_pipeline, build_prompt
 
-model_embed = get_embedder()
 qa_pipeline = get_flan_pipeline()
+model_embed = get_embedder()
 
 st.set_page_config(page_title="MediPDF Chatbot", page_icon="🩺")
 st.title("Medical PDF Chatbot with Page Sources")
