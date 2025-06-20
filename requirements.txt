@@ -7,3 +7,4 @@ PyMuPDF==1.23.25
 numpy==1.26.4
 protobuf>=4.22.0
 huggingface_hub==0.22.2
+accelerate>=0.27.0
